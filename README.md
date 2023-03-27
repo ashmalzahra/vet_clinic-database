@@ -15,6 +15,7 @@
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
+- [Acknowledgements](#acknowledgments)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -104,8 +105,15 @@ Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Acknowledgments
+
+- [curriculum-databases-projects-template](https://github.com/microverseinc/curriculum-template-databases) from Microverse
+
+
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./MIT.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
