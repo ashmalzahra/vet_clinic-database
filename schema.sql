@@ -10,6 +10,6 @@ CREATE TABLE animals(
 );
 
 ALTER TABLE animals
-ADD species TEXT;
+ADD species VARCHAR(50);
 
 
