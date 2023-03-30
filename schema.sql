@@ -12,6 +12,8 @@ CREATE TABLE animals(
 ALTER TABLE animals
 ADD species VARCHAR(50);
 
+/* Create new table */
+
 CREATE TABLE owners(
   id               INT GENERATED ALWAYS AS IDENTITY,
   full_name        VARCHAR(200),
@@ -24,6 +26,8 @@ CREATE TABLE species(
   name             VARCHAR(200),
   PRIMARY KEY (id)     
 );
+
+/* Update existing table */
 
 ALTER TABLE animals ADD id INT NOT NULL CONSTRAINT my_table_default_constraint GENERATED ALWAYS AS IDENTITY;
 ALTER TABLE animals

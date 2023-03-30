@@ -15,6 +15,8 @@ INSERT INTO animals ( name, date_of_birth, weight_kg, neutered, escape_attempts)
 INSERT INTO animals ( name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES ('Blossom', '1998-10-13', 17, TRUE, 3);
 INSERT INTO animals ( name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES ('Ditto', '2022-05-14', 22, TRUE, 4);
 
+/* Insert new table data. */
+
 INSERT INTO owners ( full_name, age) VALUES ('Jennifer Orwell', 19);
 INSERT INTO owners ( full_name, age) VALUES ('Bob', 45);
 INSERT INTO owners ( full_name, age) VALUES ('Melody Pond', 77);
@@ -23,6 +25,8 @@ INSERT INTO owners ( full_name, age) VALUES ('Jodie Whittaker', 38);
 
 INSERT INTO species (name) VALUES ('Pokemon');
 INSERT INTO species (name) VALUES ('Digimon');
+
+/* Modify existing data. */
 
 UPDATE animals                                                                                                                                                                 
 SET species_id = 2       
