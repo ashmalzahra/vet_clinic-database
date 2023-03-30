@@ -1,2 +1,2 @@
-app/* linguist-documentation=false
-app/* linguist-vendored
+*.sql linguist-detectable
+quickstart/*.yml linguist-detectable
