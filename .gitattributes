@@ -1,2 +1,2 @@
-*.PL/pgSQL linguist-detectable
+*.sql linguist-detectable
 quickstart/*.yml linguist-detectable
