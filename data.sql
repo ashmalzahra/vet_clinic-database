@@ -17,6 +17,7 @@ INSERT INTO animals ( name, date_of_birth, weight_kg, neutered, escape_attempts)
 
 /* Insert new table data. */
 
+INSERT INTO owners ( full_name, age) VALUES ('Sam Smith', 34);
 INSERT INTO owners ( full_name, age) VALUES ('Jennifer Orwell', 19);
 INSERT INTO owners ( full_name, age) VALUES ('Bob', 45);
 INSERT INTO owners ( full_name, age) VALUES ('Melody Pond', 77);
@@ -35,6 +36,10 @@ WHERE name LIKE '%mon%';
 UPDATE animals 
 SET species_id = 1
 WHERE species_id IS NULL;
+
+UPDATE animals
+set owner_id = 1
+where name = 'Agumon'
 
 UPDATE animals
 set owner_id = 2
