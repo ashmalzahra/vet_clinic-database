@@ -155,6 +155,73 @@ SELECT A.name as animal_name, S.name as type, O.full_name as owner_name
         ON O.id = A.owner_id
   GROUP BY owner_name
   ORDER BY animal_quantity DESC;
+ 
+ -- QUERIES for join table
 
+SELECT A.name as animal_name, V.name as vet_name, D.date_of_visit as visit_date
+  FROM visits D
+  JOIN vets V ON V.id = D.vet_id
+  JOIN animals A ON A.id = D.animals_id
+  WHERE V.id = 1
+  ORDER BY date_of_visit DESC
+  LIMIT 1;
 
+SELECT COUNT(A.name) as animals, V.name as vet_name
+  FROM visits D
+  JOIN vets V ON V.id = D.vet_id
+  JOIN animals A ON A.id = D.animals_id
+  WHERE V.id = 3
+  GROUP BY V.name;
 
+SELECT V.name as vet_name, S.name as specialties
+  FROM specializations A
+  FULL OUTER JOIN vets V ON V.id = A.vet_id
+  FULL OUTER JOIN species S ON S.id = A.species_id;
+
+SELECT A.name as animal_name, V.name as vet_name, D.date_of_visit 
+  FROM visits D
+  JOIN vets V ON V.id = D.vet_id
+  JOIN animals A ON A.id = D.animals_id
+  WHERE V.id = 3 AND D.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+
+SELECT A.name as animal_name, COUNT(V.*) as visits
+  FROM visits V
+  JOIN animals A ON A.id = V.animals_id
+  GROUP BY animal_name
+  ORDER BY visits DESC
+  LIMIT 1;
+
+SELECT A.name as animal_name, V.name as vet_name, D.date_of_visit
+  FROM visits D
+  JOIN animals A ON A.id = D.animals_id
+  JOIN vets V ON V.id = D.vet_id
+  WHERE V.id = 2
+  ORDER BY D.date_of_visit ASC
+  LIMIT 1;
+
+SELECT D.date_of_visit, A.name as animal_name, A.date_of_birth, A.escape_attempts, A.weight_kg, V.name as vet_name, V.age,V.date_of_graduation
+  FROM visits D
+  JOIN animals A ON A.id = D.animals_id
+  JOIN vets V ON V.id = D.vet_id
+  ORDER BY D.date_of_visit DESC
+  LIMIT 1;
+
+SELECT A.name as animal_name, Z.name,  V.name, V.age, S.species_id
+FROM animals A
+FULL JOIN visits B ON B.animals_id = A.id
+FULL JOIN species Z ON A.species_id = Z.id
+FULL JOIN vets V ON V.id = B.vet_id
+FUll JOIN specializations S ON S.vet_id = V.id
+WHERE S.species_id is null
+or S.species_id != A.species_id AND V.id != 3;
+
+SELECT Z.name as species, COUNT(A.*) as animal_frec
+FROM animals A
+FULL JOIN visits B ON B.animals_id = A.id
+FULL JOIN species Z ON A.species_id = Z.id
+FULL JOIN vets V ON V.id = B.vet_id
+FUll JOIN specializations S ON S.vet_id = V.id
+WHERE V.name = 'Maisy Smith'
+GROUP BY species
+ORDER BY animal_frec DESC
+LIMIT 1;

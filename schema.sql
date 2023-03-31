@@ -71,4 +71,3 @@ CREATE TABLE visits(
 
 
 
-

@@ -79,7 +79,6 @@ Clone this repository to your desired folder and run <code>psql</code> in your t
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[add "join table" for visits]**
 - [ ] **[database performance audit]**
 - [ ] **[add database schema diagram]**
 
