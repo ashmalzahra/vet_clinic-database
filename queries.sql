@@ -225,3 +225,14 @@ WHERE V.name = 'Maisy Smith'
 GROUP BY species
 ORDER BY animal_frec DESC
 LIMIT 1;
+
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+-- Indexing to improve performance
+CREATE INDEX animal_id_index ON visits (animals_id);
+
+CREATE INDEX vets_id_index ON visits (vets_id);
+
+CREATE INDEX email_index ON owners (email ASC);
