@@ -12,7 +12,6 @@
   - [Setup](#setup)
   - [Install](#install)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [Acknowledgements](#acknowledgments)
@@ -71,16 +70,6 @@ Clone this repository to your desired folder and run <code>psql</code> in your t
 - GitHub: [@githubhandle](https://github.com/ashmalzahra)
 - Twitter: [@twitterhandle](https://twitter.com/AshmalZahraa)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ashmal-zahra)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[database performance audit]**
-- [ ] **[add database schema diagram]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
