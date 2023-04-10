@@ -7,14 +7,17 @@
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
   - [Setup](#setup)
-  - [Install](#install)
-- [👥 Authors](#authors)
+  - [Create database](#create-database)
+- [👥 Author](#author)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
-- [Acknowledgements](#acknowledgments)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -26,7 +29,6 @@ A relational database has been used to create the data structure for a vet clini
  - animals' owners
  - clinic employees
  - visits
-
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -51,15 +53,49 @@ A relational database has been used to create the data structure for a vet clini
 ## 💻 Getting Started <a name="getting-started"></a>
 
  - To get a local copy up and running, follow these steps.
+ 
+### Prerequisites
 
-### Setup
+In order to run this project you need:
 
-Clone this repository to your desired folder and run <code>psql</code> in your terminal to connect to your PostgreSQL server.
+- [PostgreSQL server](https://www.postgresql.org/download/) installed and running
+- [psql](https://www.postgresql.org/docs/current/app-psql.html) installed
 
 ### Install
 
  - Install the relational database [PostgreSQL](https://www.postgresql.org/).
  - After installing PostgreSQL read the [Getting started](https://www.postgresql.org/docs/current/tutorial-start.html) chapter from PostgreSQL's manual to understand the basics and how to check if it's working.
+
+### Setup
+
+Clone this repository to your desired folder.
+
+1. Connect to your PostgreSQL server with `psql`
+```
+> psql
+postgres=#
+```
+
+2. Create the database `vet_clinic`
+```
+postgres=# CREATE DATABASE vet_clinic;
+CREATE DATABASE
+```
+
+3. Connect to your database vet_clinic. Inside your current session do:
+```
+postgres=# \c vet_clinic
+You are now connected to database "vet_clinic" as user "postgres".
+vet_clinic=#
+```
+
+That's it! Congratulations, you have created your database and connected to it. Next, we will add a table.
+
+- Use [schema.sql](./schema.sql) to create all tables.
+- Use [data.sql](./data.sql) to populate tables with sample data.
+- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
@@ -95,11 +131,10 @@ Give a ⭐️ if you like this project!
 
 - [curriculum-databases-projects-template](https://github.com/microverseinc/curriculum-template-databases) from Microverse
 
-
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
